@@ -13,6 +13,10 @@ const App = () => {
 
   const listofItems = () => {
     setItems((oldItem) => {
+      if (inputList === "") {
+        alert("Empty values not allowed");
+        return [...oldItem];
+      }
       return [...oldItem, inputList];
   });
   setInputList("");
